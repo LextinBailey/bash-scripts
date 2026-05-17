@@ -1,10 +1,15 @@
 #!/bin/bash
 
-echo "Creating folders..."
+if [ -z "$1" ]; then
+    echo "Please provide a project name."
+    exit 1
+fi
 
-mkdir -p project/src
-mkdir -p project/docs
-mkdir -p project/tests
+PROJECT_NAME=$1
+
+echo "Creating project structure for $PROJECT_NAME..."
+
+mkdir -p "$PROJECT_NAME"/{src,docs,tests}
 
 echo "Done."
 
