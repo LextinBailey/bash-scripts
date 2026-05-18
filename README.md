@@ -99,5 +99,33 @@ Failed to restart nginx.
 
 ### 4. 04_process_file.sh
 
+Processes a file and outputs each line.
+
+#### How to Run
+
+```bash
+./04_process_file.sh test.txt
+```
+
+#### Example Output
+
+```bash
+Line 1: hello
+Line 2: world
+Line 3: foo
+Line 4: bar
+```
+
+#### Concepts Demonstrated
+
+- Checking if a file exists with `[ ! -f ]`
+- Looping with `while ... do ... done`
+- Reading line by line with `IFS= read -r line`
+- Input redirection with `<`
+- Counter variables
+- Arithmetic with `$(( ))`
+
+### 5. 05_validate_input.sh
+
 Coming next...
 
