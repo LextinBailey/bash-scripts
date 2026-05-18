@@ -127,5 +127,25 @@ Line 4: bar
 
 ### 5. 05_validate_input.sh
 
-Coming next...
+Validates a username (letters and numbers) and an age (1-120).
+
+#### How to Run
+
+```bash
+./05_validate_input.sh dragonslayer19 25
+```
+
+#### Example Output
+
+```bash
+Valid input! Username: dragonslayer19, Age: 25
+```
+
+#### Concepts Demonstrated
+
+- Pattern matching with `[[ ]]`
+- Regex match operator `=~`
+- Regex patterns (`^`, `$`, `[a-zA-Z0-9]`, `[0-9]`, `+`)
+- Numeric comparison with `-lt` and `-gt`
+- Combining conditions with or `-o`
 
