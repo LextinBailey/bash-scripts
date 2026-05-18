@@ -67,4 +67,37 @@ Success.
 
 ### 3. 03_service_monitor.sh
 
+Checks if a service is currently running. If not, attempts to restart the service.
+
+#### How to Run
+
+```bash
+sudo ./03_service_monitor.sh nginx
+```
+
+#### Example Output
+
+```bash
+# Service is running
+nginx is running.
+
+# Service is down and restarts successfully
+nginx is not running. Attempting restart...
+nginx restarted successfully.
+
+# Service is down and fails to restart
+nginx is not running. Attempting restart...
+Failed to restart nginx.
+```
+
+#### Concepts Demonstrated
+
+- Checking service status with `systemctl is-active`
+- Redirecting output with `> /dev/null 2>&1`
+- Nested `if` statements
+- Restarting a service with `systemctl restart`
+
+### 4. 04_process_file.sh
+
 Coming next...
+
